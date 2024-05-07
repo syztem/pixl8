@@ -1,148 +1,98 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
-   <meta charset="UTF-8">
-
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-   <title>LA Tech Support | Expert IT Services</title>
-
-   <link rel="stylesheet" href="styles.css">
-
-   <script src="https://unpkg.com/htmx.org@1.9.2/dist/htmx.min.js"></script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LA Tech Support | Expert IT Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/htmx.org@1.9.2/dist/htmx.min.js"></script>
 </head>
-
 <body>
+    <!-- Header -->
+    <header>
+        <nav id="navbar" hx-get="/nav-content" hx-trigger="load" hx-swap="innerHTML">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <img src="placeholder-nav.png" alt="Placeholder for Navigation Bar">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam.</p>
+        </nav>
+    </header>
 
-   <!-- Header -->
+    <!-- Hero Section -->
+    <section class="hero" hx-get="/hero-content" hx-trigger="load" hx-swap="innerHTML">
+        <img src="placeholder-hero.jpg" alt="Placeholder for Hero Section">
+        <h1>Lorem Ipsum Dolor</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam.</p>
+        <a href="#" class="btn">Get Started</a>
+    </section>
 
-   <header>
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="service-cards-container" hx-get="/services" hx-trigger="load" hx-swap="innerHTML">
+            <div class="service-card">
+                <img src="placeholder-services.png" alt="Placeholder for Service Cards">
+                <h3>Service 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam.</p>
+            </div>
+            <div class="service-card">
+                <img src="placeholder-services.png" alt="Placeholder for Service Cards">
+                <h3>Service 2</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam.</p>
+            </div>
+        </div>
+    </section>
 
-       <nav id="navbar" hx-get="/nav-content" hx-trigger="load" hx-swap="innerHTML">
+    <!-- Testimonials Section -->
+    <section id="testimonials" hx-get="/testimonials" hx-trigger="load" hx-swap="innerHTML">
+        <img src="placeholder-testimonials.jpg" alt="Placeholder for Testimonials">
+        <div class="testimonial">
+            <blockquote>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam.</p>
+            </blockquote>
+            <cite>- John Doe, CEO of Acme Corp</cite>
+        </div>
+        <div class="testimonial">
+            <blockquote>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam.</p>
+            </blockquote>
+            <cite>- Jane Smith, CTO of Globex Inc.</cite>
+        </div>
+    </section>
 
-           <!-- Navbar content will be loaded dynamically -->
+    <!-- Contact Form -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="contact-form" hx-post="/contact" hx-target="#contact-form" hx-swap="outerHTML">
+            <img src="placeholder-form.png" alt="Placeholder for Contact Form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
 
-           <img src="placeholder-nav.png" alt="Placeholder for Navigation Bar">
-
-           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam.</p>
-
-       </nav>
-
-   </header>
-
-   <!-- Hero Section -->
-
-   <section class="hero" hx-get="/hero-content" hx-trigger="load" hx-swap="innerHTML">
-
-       <!-- Hero content will include a stunning LA skyline background and intro text -->
-
-       <img src="placeholder-hero.jpg" alt="Placeholder for Hero Section">
-
-       <h1>Lorem Ipsum Dolor</h1>
-
-       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam.</p>
-
-   </section>
-
-   <!-- Services Section -->
-
-   <section id="services">
-
-       <h2>Our Services</h2>
-
-       <div class="service-cards-container" hx-get="/services" hx-trigger="load" hx-swap="innerHTML">
-
-           <!-- Cards showcasing different IT services -->
-
-           <img src="placeholder-services.png" alt="Placeholder for Service Cards">
-
-           <h3>Service 1</h3>
-
-           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam.</p>
-
-           <h3>Service 2</h3>
-
-           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam.</p>
-
-       </div>
-
-   </section>
-
-   <!-- Testimonials Section -->
-
-   <section id="testimonials" hx-get="/testimonials" hx-trigger="load" hx-swap="innerHTML">
-
-       <!-- Rotating testimonials from satisfied clients -->
-
-       <img src="placeholder-testimonials.jpg" alt="Placeholder for Testimonials">
-
-       <blockquote>
-         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam.</p>
-         <cite>- John Doe, CEO of Acme Corp</cite>
-       </blockquote>
-
-       <blockquote>
-         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam.</p>
-         <cite>- Jane Smith, CTO of Globex Inc.</cite>
-       </blockquote>
-
-   </section>
-
-   <!-- Contact Form -->
-
-   <section id="contact">
-
-       <h2>Contact Us</h2>
-
-       <form id="contact-form" hx-post="/contact" hx-target="#contact-form" hx-swap="outerHTML">
-
-           <!-- Contact form fields -->
-
-           <img src="placeholder-form.png" alt="Placeholder for Contact Form">
-
-           <label for="name">Name:</label>
-           <input type="text" id="name" name="name" placeholder="Enter your name" required>
-
-           <label for="email">Email:</label>
-           <input type="email" id="email" name="email" placeholder="Enter your email" required>
-
-           <label for="message">Message:</label>
-           <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
-
-           <button type="submit">Send Message</button>
-
-       </form>
-
-   </section>
-
-   <!-- Footer -->
-
-   <footer hx-get="/footer-content" hx-trigger="load" hx-swap="innerHTML">
-
-       <!-- Footer with contact details and social links -->
-
-       <img src="placeholder-footer.png" alt="Placeholder for Footer">
-
-       <h3>Contact Information</h3>
-       <p>123 Main Street, Los Angeles, CA 90001</p>
-       <p>Phone: (123) 456-7890</p>
-       <p>Email: info@latechsupport.com</p>
-
-       <h3>Follow Us</h3>
-       <ul>
-         <li><a href="#">Facebook</a></li>
-         <li><a href="#">Twitter</a></li>
-         <li><a href="#">LinkedIn</a></li>
-       </ul>
-
-       <p>&copy; 2024 LA Tech Support. All rights reserved.</p>
-
-   </footer>
-
+    <!-- Footer -->
+    <footer hx-get="/footer-content" hx-trigger="load" hx-swap="innerHTML">
+        <img src="placeholder-footer.png" alt="Placeholder for Footer">
+        <h3>Contact Information</h3>
+        <p>123 Main Street, Los Angeles, CA 90001</p>
+        <p>Phone: (123) 456-7890</p>
+        <p>Email: info@latechsupport.com</p>
+        <h3>Follow Us</h3>
+        <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">LinkedIn</a></li>
+        </ul>
+        <p>&copy; 2024 LA Tech Support. All rights reserved.</p>
+    </footer>
 </body>
-
 </html>
