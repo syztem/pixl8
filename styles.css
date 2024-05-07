@@ -206,3 +206,15 @@ body {
   footer ul li a:hover {
     color: #ccc;
   }
+  /* This is for the button hover effect */
+.btn {
+    transition: transform 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05); /* Makes the button 5% bigger */
+}
+
+.btn:not(:hover) {
+    transform: scale(1); /* Returns the button to its original size */
+}
