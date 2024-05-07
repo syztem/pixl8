@@ -21,7 +21,7 @@
 
 
     <!-- Services Section -->
-    <section id="services">
+    <section id="services" class="services">
         <h2>Our Services</h2>
         <div class="service-cards-container" hx-get="/services" hx-trigger="load" hx-swap="innerHTML">
             <div class="service-card">
@@ -38,7 +38,7 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section id="testimonials" hx-get="/testimonials" hx-trigger="load" hx-swap="innerHTML">
+    <section id="testimonials" hx-get="/testimonials" hx-trigger="load" hx-swap="innerHTML" class="testimonials">
         <img src="placeholder-testimonials.jpg" alt="Placeholder for Testimonials">
         <div class="testimonial">
             <blockquote>
@@ -55,7 +55,7 @@
     </section>
 
     <!-- Contact Form -->
-    <section id="contact">
+    <section id="contact" class="form">
         <h2>Contact Us</h2>
         <form id="contact-form" hx-post="/contact" hx-target="#contact-form" hx-swap="outerHTML">
             <img src="placeholder-form.png" alt="Placeholder for Contact Form">
@@ -70,7 +70,7 @@
     </section>
 
     <!-- Footer -->
-    <footer hx-get="/footer-content" hx-trigger="load" hx-swap="innerHTML">
+    <footer hx-get="/footer-content" hx-trigger="load" hx-swap="innerHTML" class="footer">
         <img src="placeholder-footer.png" alt="Placeholder for Footer">
         <h3>Contact Information</h3>
         <p>123 Main Street, Los Angeles, CA 90001</p>
