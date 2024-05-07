@@ -1,8 +1,11 @@
 /* Global Styles */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
+  body {
+    display: grid;
+    font-family: system-ui, sans;
+    font-size: 3.5rem;
+    font-weight: 800;
+    height: 100vh;
+    place-items: center;
   }
   
   h1, h2, h3 {
@@ -223,15 +226,4 @@ body {
   
   footer ul li a:hover {
     color: #ccc;
-  }
-  
-
-  /* Presentational styles */
-  body {
-    display: grid;
-    font-family: system-ui, sans;
-    font-size: 3.5rem;
-    font-weight: 800;
-    height: 100vh;
-    place-items: center;
   }
