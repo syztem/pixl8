@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+   <meta charset="UTF-8">
+
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>LA Tech Support | Expert IT Services</title>
+
+   <link rel="stylesheet" href="styles.css">
+
+   <script src="https://unpkg.com/htmx.org@1.9.2/dist/htmx.min.js"></script>
+
+</head>
+
+<body>
+
+   <!-- Header -->
+
+   <header>
+
+       <nav id="navbar" hx-get="/nav-content" hx-trigger="load" hx-swap="innerHTML">
+
+           <!-- Navbar content will be loaded dynamically -->
+           <img src="placeholder-nav.png" alt="Placeholder for Navigation Bar">
+
+       </nav>
+
+   </header>
+
+   <!-- Hero Section -->
+
+   <section class="hero" hx-get="/hero-content" hx-trigger="load" hx-swap="innerHTML">
+
+       <!-- Hero content will include a stunning LA skyline background and intro text -->
+       <img src="placeholder-hero.jpg" alt="Placeholder for Hero Section">
+
+   </section>
+
+   <!-- Services Section -->
+
+   <section id="services">
+
+       <h2>Our Services</h2>
+
+       <div class="service-cards-container" hx-get="/services" hx-trigger="load" hx-swap="innerHTML">
+
+           <!-- Cards showcasing different IT services -->
+           <img src="placeholder-services.png" alt="Placeholder for Service Cards">
+
+       </div>
+
+   </section>
+
+   <!-- Testimonials Section -->
+
+   <section id="testimonials" hx-get="/testimonials" hx-trigger="load" hx-swap="innerHTML">
+
+       <!-- Rotating testimonials from satisfied clients -->
+       <img src="placeholder-testimonials.jpg" alt="Placeholder for Testimonials">
+
+   </section>
+
+   <!-- Contact Form -->
+
+   <section id="contact">
+
+       <h2>Contact Us</h2>
+
+       <form id="contact-form" hx-post="/contact" hx-target="#contact-form" hx-swap="outerHTML">
+
+           <!-- Contact form fields -->
+           <img src="placeholder-form.png" alt="Placeholder for Contact Form">
+
+           <button type="submit">Send Message</button>
+
+       </form>
+
+   </section>
+
+   <!-- Footer -->
+
+   <footer hx-get="/footer-content" hx-trigger="load" hx-swap="innerHTML">
+
+       <!-- Footer with contact details and social links -->
+       <img src="placeholder-footer.png" alt="Placeholder for Footer">
+
+   </footer>
+
+</body>
+
+</html>
