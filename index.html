@@ -8,81 +8,102 @@
     <script src="https://unpkg.com/htmx.org@1.9.2/dist/htmx.min.js"></script>
 </head>
 <body>
-    <!-- Header -->
-
-<!-- Hero Section -->
-<section class="hero" hx-get="/hero-content" hx-trigger="load" hx-swap="innerHTML">
-    <img src="placeholder-hero.jpg" alt="Placeholder for Hero Section">
-    <h1>Lorem Ipsum Dolor</h1>
-    <p>Lorem ipsum </p>
-    <a href="#">Get Started</a>
-</section>
-
-
+    <!-- Hero Section -->
+    <section class="hero" hx-get="/hero-content" hx-trigger="load" hx-swap="innerHTML">
+        <img src="hero-image.jpg" alt="Tech Support Hero Image">
+        <!-- Hero image should be 1600x800 pixels -->
+        <div class="hero-content">
+            <h1>Unleash the Power of Technology</h1>
+            <p>Experience cutting-edge IT solutions tailored for your business needs.</p>
+            <a href="#" class="cta-button">Get Started</a>
+        </div>
+    </section>
 
     <!-- Services Section -->
-    <section id="services" class="services">
-        <h2>Our Services</h2>
-        <div class="service-cards-container" hx-get="/services" hx-trigger="load" hx-swap="innerHTML">
+    <section id="services" class="services" hx-get="/services" hx-trigger="load" hx-swap="innerHTML">
+        <h2>Our Tech-Savvy Services</h2>
+        <div class="service-cards-container">
             <div class="service-card">
-                <img src="placeholder-services.png" alt="Placeholder for Service Cards">
-                <h3>Service 1</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam.</p>
+                <img src="service1.png" alt="Service 1">
+                <!-- Service card images should be 400x300 pixels -->
+                <h3>Cybersecurity Solutions</h3>
+                <p>Protect your digital assets with our state-of-the-art cybersecurity measures. Our team of experts will fortify your defenses against cyber threats.</p>
             </div>
             <div class="service-card">
-                <img src="placeholder-services.png" alt="Placeholder for Service Cards">
-                <h3>Service 2</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam.</p>
+                <img src="service2.png" alt="Service 2">
+                <h3>Cloud Computing</h3>
+                <p>Embrace the cloud revolution and unlock the potential of scalable and flexible computing. We'll help you migrate and optimize your infrastructure.</p>
+            </div>
+            <div class="service-card">
+                <img src="service3.png" alt="Service 3">
+                <h3>Data Analytics</h3>
+                <p>Harness the power of data to drive informed decision-making. Our data analytics solutions will uncover valuable insights for your business growth.</p>
             </div>
         </div>
     </section>
 
     <!-- Testimonials Section -->
-    <section id="testimonials" hx-get="/testimonials" hx-trigger="load" hx-swap="innerHTML" class="testimonials">
-        <img src="placeholder-testimonials.jpg" alt="Placeholder for Testimonials">
-        <div class="testimonial">
-            <blockquote>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam.</p>
-            </blockquote>
-            <cite>- John Doe, CEO of Acme Corp</cite>
-        </div>
-        <div class="testimonial">
-            <blockquote>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam.</p>
-            </blockquote>
-            <cite>- Jane Smith, CTO of Globex Inc.</cite>
+    <section id="testimonials" class="testimonials" hx-get="/testimonials" hx-trigger="load" hx-swap="innerHTML">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonial-container">
+            <div class="testimonial">
+                <img src="testimonial1.jpg" alt="Client 1">
+                <!-- Testimonial images should be 200x200 pixels -->
+                <blockquote>
+                    <p>"LA Tech Support revolutionized our IT infrastructure. Their expertise and dedication are unparalleled. Our systems are now more secure and efficient than ever."</p>
+                </blockquote>
+                <cite>- John Doe, CEO of Acme Corp</cite>
+            </div>
+            <div class="testimonial">
+                <img src="testimonial2.jpg" alt="Client 2">
+                <blockquote>
+                    <p>"Partnering with LA Tech Support was the best decision we made. Their innovative solutions have transformed the way we operate, giving us a competitive edge in the market."</p>
+                </blockquote>
+                <cite>- Jane Smith, CTO of Globex Inc.</cite>
+            </div>
         </div>
     </section>
 
     <!-- Contact Form -->
     <section id="contact" class="form">
-        <h2>Contact Us</h2>
+        <h2>Let's Connect</h2>
         <form id="contact-form" hx-post="/contact" hx-target="#contact-form" hx-swap="outerHTML">
-            <img src="placeholder-form.png" alt="Placeholder for Contact Form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" placeholder="Enter your name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
-            <button type="submit">Send Message</button>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+            </div>
+            <button type="submit" class="submit-button">Send Message</button>
         </form>
     </section>
 
     <!-- Footer -->
-    <footer hx-get="/footer-content" hx-trigger="load" hx-swap="innerHTML" class="footer">
-        <img src="placeholder-footer.png" alt="Placeholder for Footer">
-        <h3>Contact Information</h3>
-        <p>123 Main Street, Los Angeles, CA 90001</p>
-        <p>Phone: (123) 456-7890</p>
-        <p>Email: info@latechsupport.com</p>
-        <h3>Follow Us</h3>
-        <ul>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">LinkedIn</a></li>
-        </ul>
-        <p>&copy; 2024 LA Tech Support. All rights reserved.</p>
+    <footer class="footer" hx-get="/footer-content" hx-trigger="load" hx-swap="innerHTML">
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p>123 Tech Street, Los Angeles, CA 90001</p>
+                <p>Phone: (123) 456-7890</p>
+                <p>Email: info@latechsupport.com</p>
+            </div>
+            <div class="social-media">
+                <h3>Connect With Us</h3>
+                <ul>
+                    <li><a href="#"><img src="facebook.png" alt="Facebook"></a></li>
+                    <li><a href="#"><img src="twitter.png" alt="Twitter"></a></li>
+                    <li><a href="#"><img src="linkedin.png" alt="LinkedIn"></a></li>
+                </ul>
+                <!-- Social media icons should be 32x32 pixels -->
+            </div>
+        </div>
+        <p class="copyright">&copy; 2024 LA Tech Support. All rights reserved.</p>
     </footer>
 </body>
 </html>
