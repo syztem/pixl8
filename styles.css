@@ -3,15 +3,36 @@ body {
     font-family: sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4; /* Light gray background */
+    transition: background-color 0.3s ease; 
 }
 
-section {
-    padding: 40px; 
+/* Dark Theme (default) */
+body {
+    background-color: #222; /* Dark background */
+    color: #e0d5c1; /* Sepia text */
 }
-
 h1, h2, h3 {
-    color: #333; /* Dark gray text */
+    color: #b89e7a; /* Earthy tone headings */
+}
+.cta-button, .submit-button {
+    background-color: #584a36; /* Earthy button */
+    color: #e0d5c1;
+}
+
+/* Light Theme */
+body.light-theme {
+    background-color: #f8f2ec; /* Pastel background */
+    color: #444; /* Dark text */
+}
+body.light-theme h1, 
+body.light-theme h2, 
+body.light-theme h3 {
+    color: #3a6ea5; /* Water color headings */
+}
+body.light-theme .cta-button, 
+body.light-theme .submit-button {
+    background-color: #a2d2ff; /* Light blue button */
+    color: #444;
 }
 
 /* Hero Section */

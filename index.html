@@ -6,33 +6,36 @@
     <title>LA Tech Support | Expert IT Services</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://unpkg.com/htmx.org@1.9.2/dist/htmx.min.js"></script>
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle("light-theme");
+        }
+    </script>
 </head>
 <body>
+    <button onclick="toggleTheme()" style="position: absolute; top: 10px; right: 10px;">
+        Switch Theme
+    </button>
+
     <!-- Hero Section -->
     <section class="hero" hx-get="/hero-content" hx-trigger="load" hx-swap="innerHTML">
-        <img src="hero-image.jpg" alt="Tech Support Hero Image" class="hero-image">
-        <!-- Hero image should be 1600x800 pixels -->
+        <img src="hero-image.jpg" alt="Tech Support Hero Image" class="hero-image"> 
         <div class="hero-content">
             <h1>Unleash the Power of Technology</h1>
             <p>Experience cutting-edge IT solutions tailored for your business needs.</p>
             <a href="#" class="cta-button">Get Started</a>
-            <!-- Subtle hover effect on the button -->
         </div>
-        <!-- Add a subtle tech-themed background element -->
     </section>
 
     <!-- Services Section -->
     <section id="services" class="services" hx-get="/services" hx-trigger="load" hx-swap="innerHTML">
         <h2>Our Tech-Savvy Services</h2>
         <div class="service-cards-container">
-            <div class="service-card" hx-get="/service1-details" hx-trigger="hover" hx-target="this" hx-swap="innerHTML"> 
-                <!-- Hover effect to reveal more details about the service -->
+            <div class="service-card" hx-get="/service1-details" hx-trigger="hover" hx-target="this" hx-swap="innerHTML">
                 <img src="service1.png" alt="Service 1">
-                <!-- Service card images should be 400x300 pixels -->
                 <h3>Cybersecurity Solutions</h3>
                 <p>Protect your digital assets...</p>
             </div>
-            <!-- Similar hover effect applied to other service cards -->
             <div class="service-card" hx-get="/service2-details" hx-trigger="hover" hx-target="this" hx-swap="innerHTML">
                 <img src="service2.png" alt="Service 2">
                 <h3>Cloud Computing</h3>
@@ -44,38 +47,33 @@
                 <p>Harness the power of data...</p>
             </div>
         </div>
-        <!-- Add subtle techy design elements like circuit board patterns or data visualizations in the background -->
     </section>
 
-    <!-- Testimonials Section --> 
+    <!-- Testimonials Section -->
     <section id="testimonials" class="testimonials" hx-get="/testimonials" hx-trigger="load" hx-swap="innerHTML">
         <h2>What Our Clients Say</h2>
         <div class="testimonial-container">
             <div class="testimonial">
-                <img src="testimonial1.jpg" alt="Client 1">
-                <!-- Testimonial images should be 200x200 pixels -->
+                <img src="testimonial1.jpg" alt="Client 1"> 
                 <blockquote>
                     <p>"LA Tech Support revolutionized our IT infrastructure..."</p>
                 </blockquote>
                 <cite>- John Doe, CEO of Acme Corp</cite>
             </div>
-            <!-- Add a subtle hover effect to highlight the current testimonial -->
             <div class="testimonial">
-                <img src="testimonial2.jpg" alt="Client 2">
+                <img src="testimonial2.jpg" alt="Client 2"> 
                 <blockquote>
                     <p>"Partnering with LA Tech Support was the best decision..."</p>
                 </blockquote>
                 <cite>- Jane Smith, CTO of Globex Inc.</cite>
             </div>
         </div>
-        <!-- Add subtle animations or transitions between testimonials -->
     </section>
 
     <!-- Contact Form -->
     <section id="contact" class="form">
         <h2>Let's Connect</h2>
         <form id="contact-form" hx-post="/contact" hx-target="#contact-form" hx-swap="outerHTML">
-            <!-- Add subtle hover effects to form fields -->
             <div class="form-group">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" placeholder="Enter your name" required>
@@ -89,16 +87,14 @@
                 <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
             </div>
             <button type="submit" class="submit-button">Send Message</button> 
-            <!-- Add a loading animation while the message is being sent -->
         </form>
     </section>
 
-    <!-- Footer --> 
+    <!-- Footer -->
     <footer class="footer" hx-get="/footer-content" hx-trigger="load" hx-swap="innerHTML">
         <div class="footer-content">
             <div class="contact-info">
                 <h3>Contact Information</h3> 
-                <!-- Add subtle animation to the contact information on hover -->
                 <p>123 Tech Street, Los Angeles, CA 90001</p>
                 <p>Phone: (123) 456-7890</p> 
                 <p>Email: info@latechsupport.com</p> 
@@ -110,8 +106,6 @@
                     <li><a href="#"><img src="twitter.png" alt="Twitter"></a></li>
                     <li><a href="#"><img src="linkedin.png" alt="LinkedIn"></a></li>
                 </ul>
-                <!-- Social media icons should be 32x32 pixels -->
-                <!-- Add subtle hover effects to social media icons -->
             </div>
         </div>
         <p class="copyright">© 2024 LA Tech Support. All rights reserved.</p> 
