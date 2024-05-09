@@ -1,42 +1,24 @@
-/* Reset and General Styling */
+/* General Styling */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
-    background-color: #f8f8f8;
+    color: #fff; /* Default text color for dark mode */
+    background-color: #222; /* Default background color for dark mode */
     transition: background-color 0.3s ease;
 }
 
-a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* Apply specific styles based on theme */
-body.dark-theme .cta-button,
-body.dark-theme .submit-button {
-    background-color: #007bff;
-    color: #fff;
-}
-
-body.light-theme .cta-button,
-body.light-theme .submit-button {
-    background-color: #007bff;
-    color: #fff;
+/* Light Theme */
+body.light-theme {
+    color: #333; /* Text color for light mode */
+    background-color: #f8f8f8; /* Background color for light mode */
 }
 
 /* Hero Section */
 .hero {
     position: relative;
     text-align: center;
-    color: #fff;
     padding: 100px 0;
-    overflow: hidden;
 }
 
 .hero-bg {
@@ -45,7 +27,7 @@ body.light-theme .submit-button {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url("tech-background.png");
+    background-image: url("tech-background.png"); /* Replace with your hero background image */
     background-size: cover;
     background-position: center;
     opacity: 0.3;
@@ -114,7 +96,7 @@ body.light-theme .submit-button {
     border-radius: 5px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background-image: url("circuit-board-pattern.jpg"); /* Replace with your service card background */
+    background-image: url("circuit-board.jpg"); /* Replace with your service card background */
     background-size: cover;
 }
 
@@ -124,41 +106,6 @@ body.light-theme .submit-button {
 }
 
 .service-card h3 {
-    margin-bottom: 10px;
-}
-
-/* Testimonials Section */
-#testimonials {
-    padding: 80px 0;
-    text-align: center;
-}
-
-.testimonial-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.testimonial {
-    width: 40%;
-    padding: 20px;
-    margin: 20px;
-    background-color: #fff;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    text-align: center;
-    opacity: 0.7;
-    transition: opacity 0.3s ease;
-}
-
-.testimonial:hover {
-    opacity: 0.9;
-}
-
-.testimonial img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
     margin-bottom: 10px;
 }
 
@@ -181,8 +128,8 @@ body.light-theme .submit-button {
 .form-group textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ddd;
     border-radius: 5px;
+    border: 1px solid #ddd;
     transition: border-color 0.3s ease;
 }
 
@@ -210,21 +157,12 @@ body.light-theme .submit-button {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 50px 0;
+    padding: 40px 0;
 }
 
 .footer-content {
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.contact-info {
-    margin-right: 30px;
-}
-
-.contact-info h3 {
-    margin-bottom: 10px;
+    justify-content: space-around;
 }
 
 .social-media ul {
@@ -240,7 +178,6 @@ body.light-theme .submit-button {
 .social-media img {
     width: 32px;
     height: 32px;
-    border-radius: 50%;
     opacity: 0.7;
     transition: opacity 0.3s ease;
 }

@@ -9,16 +9,12 @@
     <script>
         function toggleTheme() {
             document.body.classList.toggle("dark-theme");
-            }
+            document.body.classList.toggle("light-theme");
+        }
     </script>
-    <style>
-        /* Additional CSS styles can be placed here if needed */
-    </style>
 </head>
-<body>
-    <button onclick="toggleTheme()" class="theme-switcher">
-        Switch Theme
-    </button>
+<body class="dark-theme">
+    <button onclick="toggleTheme()" class="theme-switcher">Switch Theme</button>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -34,21 +30,7 @@
     <section id="services" class="services">
         <h2>Our Tech-Savvy Services</h2>
         <div class="service-cards-container">
-            <div class="service-card" hx-get="/service1-details" hx-trigger="hover" hx-target="this" hx-swap="innerHTML">
-                <img src="service1.png" alt="Service 1">
-                <h3>Cybersecurity Solutions</h3>
-                <p>Protect your digital assets...</p>
-            </div>
-            <div class="service-card" hx-get="/service2-details" hx-trigger="hover" hx-target="this" hx-swap="innerHTML">
-                <img src="service2.png" alt="Service 2">
-                <h3>Cloud Computing</h3>
-                <p>Embrace the cloud revolution...</p>
-            </div>
-            <div class="service-card" hx-get="/service3-details" hx-trigger="hover" hx-target="this" hx-swap="innerHTML">
-                <img src="service3.png" alt="Service 3">
-                <h3>Data Analytics</h3>
-                <p>Harness the power of data...</p>
-            </div>
+            <!-- Service Cards will be dynamically loaded -->
         </div>
     </section>
 
@@ -56,27 +38,14 @@
     <section id="testimonials" class="testimonials">
         <h2>What Our Clients Say</h2>
         <div class="testimonial-container">
-            <div class="testimonial">
-                <img src="testimonial1.jpg" alt="Client 1"> 
-                <blockquote>
-                    <p>"LA Tech Support revolutionized our IT infrastructure..."</p>
-                </blockquote>
-                <cite>- John Doe, CEO of Acme Corp</cite>
-            </div>
-            <div class="testimonial">
-                <img src="testimonial2.jpg" alt="Client 2"> 
-                <blockquote>
-                    <p>"Partnering with LA Tech Support was the best decision..."</p>
-                </blockquote>
-                <cite>- Jane Smith, CTO of Globex Inc.</cite>
-            </div>
+            <!-- Testimonials will be dynamically loaded -->
         </div>
     </section>
 
     <!-- Contact Form -->
     <section id="contact" class="form">
         <h2>Let's Connect</h2>
-        <form id="contact-form" hx-post="/contact" hx-target="#contact-form" hx-swap="outerHTML">
+        <form id="contact-form">
             <div class="form-group">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" placeholder="Enter your name" required>
@@ -89,7 +58,7 @@
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
             </div>
-            <button type="submit" class="submit-button">Send Message</button> 
+            <button type="submit" class="submit-button">Send Message</button>
         </form>
     </section>
 
@@ -97,13 +66,13 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="contact-info">
-                <h3>Contact Information</h3> 
+                <h3>Contact Information</h3>
                 <p>123 Tech Street, Los Angeles, CA 90001</p>
-                <p>Phone: (123) 456-7890</p> 
-                <p>Email: info@latechsupport.com</p> 
+                <p>Phone: (123) 456-7890</p>
+                <p>Email: info@latechsupport.com</p>
             </div>
             <div class="social-media">
-                <h3>Connect With Us</h3> 
+                <h3>Connect With Us</h3>
                 <ul>
                     <li><a href="#"><img src="facebook.png" alt="Facebook"></a></li>
                     <li><a href="#"><img src="twitter.png" alt="Twitter"></a></li>
@@ -111,11 +80,9 @@
                 </ul>
             </div>
         </div>
-        <p class="copyright">© 2024 LA Tech Support. All rights reserved.</p> 
+        <p class="copyright">© 2024 LA Tech Support. All rights reserved.</p>
     </footer>
-
-    <script>
-        // JavaScript can be placed here for additional functionality
-    </script>
 </body>
 </html>
+<!--<a href="https://www.freepik.com/free-ai-image/digital-era-s-complexity-precision-come-life-macro-shot-computer-s-brain_65363285.htm#fromView=search&page=1&position=41&uuid=f3653b72-664a-40c7-9287-533399645095">Image by rorozoa on Freepik</a>-->
+<!--<a href="https://www.freepik.com/free-ai-image/computer-chip-connects-electrical-components-powering-global-communications-industry-generated-by-artificial-intelligence_77067743.htm#fromView=search&page=1&position=1&uuid=f3653b72-664a-40c7-9287-533399645095">Image by studiogstock on Freepik</a>-->
