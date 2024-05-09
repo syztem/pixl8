@@ -11,15 +11,18 @@
             document.body.classList.toggle("light-theme");
         }
     </script>
+    <style>
+        /* Additional CSS styles can be placed here if needed */
+    </style>
 </head>
 <body>
-    <button onclick="toggleTheme()" style="position: absolute; top: 10px; right: 10px;">
+    <button onclick="toggleTheme()" class="theme-switcher">
         Switch Theme
     </button>
 
     <!-- Hero Section -->
-    <section class="hero" hx-get="/hero-content" hx-trigger="load" hx-swap="innerHTML">
-        <img src="hero-image.jpg" alt="Tech Support Hero Image" class="hero-image"> 
+    <section class="hero">
+        <div class="hero-bg"></div>
         <div class="hero-content">
             <h1>Unleash the Power of Technology</h1>
             <p>Experience cutting-edge IT solutions tailored for your business needs.</p>
@@ -28,7 +31,7 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="services" hx-get="/services" hx-trigger="load" hx-swap="innerHTML">
+    <section id="services" class="services">
         <h2>Our Tech-Savvy Services</h2>
         <div class="service-cards-container">
             <div class="service-card" hx-get="/service1-details" hx-trigger="hover" hx-target="this" hx-swap="innerHTML">
@@ -50,7 +53,7 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials" hx-get="/testimonials" hx-trigger="load" hx-swap="innerHTML">
+    <section id="testimonials" class="testimonials">
         <h2>What Our Clients Say</h2>
         <div class="testimonial-container">
             <div class="testimonial">
@@ -91,7 +94,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer" hx-get="/footer-content" hx-trigger="load" hx-swap="innerHTML">
+    <footer class="footer">
         <div class="footer-content">
             <div class="contact-info">
                 <h3>Contact Information</h3> 
@@ -110,5 +113,9 @@
         </div>
         <p class="copyright">© 2024 LA Tech Support. All rights reserved.</p> 
     </footer>
+
+    <script>
+        // JavaScript can be placed here for additional functionality
+    </script>
 </body>
 </html>
