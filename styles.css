@@ -1,12 +1,16 @@
-/* Reset and General Styling */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    background-color: #f8f8f8;
-    transition: background-color 0.3s ease;
+/* Apply specific styles based on theme */
+body.dark-theme .cta-button,
+body.dark-theme .submit-button {
+    background-color: #007bff;
+    color: #fff;
 }
+
+body.light-theme .cta-button,
+body.light-theme .submit-button {
+    background-color: #007bff;
+    color: #fff;
+}
+
 
 a {
     color: #007bff;
@@ -17,7 +21,7 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Dark Theme (default) */
+/* Dark Theme */
 body.dark-theme {
     background-color: #222;
     color: #e0d5c1;
@@ -36,6 +40,7 @@ body.light-theme {
 .light-theme a {
     color: #007bff;
 }
+
 
 /* Hero Section */
 .hero {
