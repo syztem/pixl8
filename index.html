@@ -16,6 +16,18 @@
         document.body.classList.add("dark-theme");
     }
 }
+window.addEventListener('scroll', function() {
+    const scrollPosition = window.scrollY;
+    const totalHeight = document.body.scrollHeight - window.innerHeight;
+    const scrollPercentage = scrollPosition / totalHeight;
+
+    document.documentElement.style.setProperty('--background-start', `url('clouds-dark.jpg')`);
+    document.documentElement.style.setProperty('--background-end', `url('clouds-light.jpg')`);
+    document.documentElement.style.setProperty('--color-start', `rgba(210, 166, 121, ${1 - scrollPercentage})`);
+    document.documentElement.style.setProperty('--color-end', `rgba(45, 45, 45, ${scrollPercentage})`);
+    document.documentElement.style.setProperty('--testimonial-background-start', `rgba(210, 166, 121, ${0.5 * (1 - scrollPercentage)})`);
+    document.documentElement.style.setProperty('--testimonial-background-end', `rgba(45, 45, 45, ${0.5 * scrollPercentage})`);
+});
     </script>
 </head>
 <body class="dark-theme">

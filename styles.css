@@ -18,7 +18,23 @@ body.light-theme {
 .hero {
     position: relative;
     text-align: center;
-    padding: 100px 0;
+    padding: 100px 0;:root {
+    --background-start: url('clouds-dark.jpg');
+    --background-end: url('clouds-light.jpg');
+    --color-start: #D2A679; /* Sepia tone for text */
+    --color-end: #2D2D2D; /* Dark tone for text */
+    --testimonial-background-start: rgba(210, 166, 121, 0.5); /* Sepia tone for testimonials background */
+    --testimonial-background-end: rgba(45, 45, 45, 0.5); /* Dark tone for testimonials background */
+}
+
+body {
+    background: var(--background-start) no-repeat center center fixed;
+    color: var(--color-start);
+}
+
+.testimonials {
+    background: var(--testimonial-background-start);
+}
 }
 
 .hero-bg {
