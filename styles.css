@@ -1,200 +1,22 @@
-/* General Styling */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #fff; /* Default text color for dark mode */
-    background-color: #222; /* Default background color for dark mode */
-    transition: background-color 0.3s ease;
-}
-
-/* Light Theme */
-body.light-theme {
-    color: #333; /* Text color for light mode */
-    background-color: #f8f8f8; /* Background color for light mode */
-}
-
-/* Hero Section */
-.hero {
-    position: relative;
-    text-align: center;
-    padding: 100px 0;
-}
-
-.hero-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("tech-background.jpg"); /* Replace with your hero background image */
-    background-size: cover;
-    background-position: center;
-    opacity: 0.3;
-    z-index: -1;
-    animation: zoomInOut 20s infinite alternate;
-}
-
-@keyframes zoomInOut {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.05);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-.hero-content {
-    position: relative;
-    z-index: 1;
-}
-
-.hero h1 {
-    font-size: 36px;
-}
-
-.hero p {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.cta-button {
-    display: inline-block;
-    background-color: #007bff;
-    color: #fff;
-    padding: 12px 24px;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-    background-color: #0056b3;
-}
-
-/* Services Section */
-#services {
-    padding: 80px 0;
-    text-align: center;
-}
-
-.service-cards-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.service-card {
-    width: 30%;
-    padding: 20px;
-    margin: 20px 0;
-    background-color: #fff;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background-image: url("circuit-board-pattern.jpg"); /* Replace with your service card background */
-    background-size: cover;
-}
-
-.service-card:hover {
-    transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.service-card h3 {
-    margin-bottom: 10px;
-}
-
-/* Contact Form */
-#contact {
-    padding: 80px 0;
-    text-align: center;
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    transition: border-color 0.3s ease;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    border-color: #007bff;
-}
-
-.submit-button {
-    display: inline-block;
-    background-color: #007bff;
-    color: #fff;
-    padding: 12px 24px;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-.submit-button:hover {
-    background-color: #0056b3;
-}
-
-/* Footer */
-.footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 40px 0;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-around;
-}
-
-.social-media ul {
-    list-style: none;
-    padding: 0;
-}
-
-.social-media li {
-    display: inline-block;
-    margin: 0 10px;
-}
-
-.social-media img {
-    width: 32px;
-    height: 32px;
-    opacity: 0.7;
-    transition: opacity 0.3s ease;
-}
-
-.social-media img:hover {
-    opacity: 1;
-}
 body {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: url('clouds.jpg') no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+}
+
+body.dark-theme {
+    background: url('clouds-dark.jpg') no-repeat center center fixed;
+    color: #D2A679; /* Sepia tone for text */
+}
+
+body.light-theme {
+    background: url('clouds-light.jpg') no-repeat center center fixed;
+    color: #2D2D2D; /* Dark tone for text */
 }
 
 .testimonials {
@@ -202,11 +24,18 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: rgba(255, 255, 255, 0.5);
     border-radius: 15px;
     padding: 20px;
     margin: 20px;
     width: 80%;
+}
+
+body.dark-theme .testimonials {
+    background: rgba(210, 166, 121, 0.5); /* Sepia tone for testimonials background */
+}
+
+body.light-theme .testimonials {
+    background: rgba(45, 45, 45, 0.5); /* Dark tone for testimonials background */
 }
 
 .testimonial-container {
