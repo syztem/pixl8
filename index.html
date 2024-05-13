@@ -23,12 +23,14 @@ window.addEventListener('scroll', function() {
 
     document.documentElement.style.setProperty('--background-start', `url('clouds-dark.jpg')`);
     document.documentElement.style.setProperty('--background-end', `url('clouds-light.jpg')`);
-    document.documentElement.style.setProperty('--color-start', `rgba(210, 166, 121, ${1 - scrollPercentage})`);
-    document.documentElement.style.setProperty('--color-end', `rgba(45, 45, 45, ${scrollPercentage})`);
+    document.documentElement.style.setProperty('--color-start', `rgba(255, 255, 255, ${1 - scrollPercentage})`);
+    document.documentElement.style.setProperty('--color-end', `rgba(0, 0, 0, ${scrollPercentage})`);
     document.documentElement.style.setProperty('--testimonial-background-start', `rgba(210, 166, 121, ${0.5 * (1 - scrollPercentage)})`);
     document.documentElement.style.setProperty('--testimonial-background-end', `rgba(45, 45, 45, ${0.5 * scrollPercentage})`);
+    document.documentElement.style.setProperty('--testimonial-color-start', `rgba(0, 0, 0, ${1 - scrollPercentage})`);
+    document.documentElement.style.setProperty('--testimonial-color-end', `rgba(255, 255, 255, ${scrollPercentage})`);
 });
-    </script>
+</script>
 </head>
 <body class="dark-theme">
     <button onclick="toggleTheme()" class="theme-switcher">Switch Theme</button>
