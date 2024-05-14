@@ -8,6 +8,20 @@
     --testimonial-color-start: #000000; /* Black text for testimonials in dark theme */
     --testimonial-color-end: #ffffff; /* White text for testimonials in light theme */
 }
+:root {
+    --background-color: #000; /* Dark theme background */
+    --text-color: #fff; /* Dark theme text */
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.hero, .services, .testimonials, .form, .footer {
+    transition: background-color 0.5s, color 0.5s;
+}
 
 body {
     background: var(--background-start) no-repeat center center fixed;
