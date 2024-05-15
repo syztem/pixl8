@@ -5,36 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LA Tech Support | Expert IT Services</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://unpkg.com/htmx.org@1.9.2/dist/htmx.min.js"></script>
-    <script>
-        window.addEventListener('scroll', function() {
-            const scrollPosition = window.scrollY;
-            const totalHeight = document.body.scrollHeight - window.innerHeight;
-            const scrollPercentage = scrollPosition / totalHeight;
-    
-            // Calculate the new background and text colors
-            const darkBackground = { r: 0, g: 0, b: 0 }; // Black
-            const lightBackground = { r: 255, g: 255, b: 255 }; // White
-            const darkText = { r: 255, g: 255, b: 255 }; // White
-            const lightText = { r: 0, g: 0, b: 0 }; // Black
-    
-            const interpolateColor = (color1, color2, factor) => {
-                const result = {
-                    r: Math.round(color1.r + (color2.r - color1.r) * factor),
-                    g: Math.round(color1.g + (color2.g - color1.g) * factor),
-                    b: Math.round(color1.b + (color2.b - color1.b) * factor)
-                };
-                return `rgb(${result.r}, ${result.g}, ${result.b})`;
-            };
-    
-            const newBackgroundColor = interpolateColor(darkBackground, lightBackground, scrollPercentage);
-            const newTextColor = interpolateColor(darkText, lightText, scrollPercentage);
-    
-            document.documentElement.style.setProperty('--background-color', newBackgroundColor);
-            document.documentElement.style.setProperty('--text-color', newTextColor);
-        });
-    </script>
 </head>
+<body>
+
+<div class="block">Scroll down to change theme</div>
+<div class="block">Keep going...</div>
+<div class="block">Almost there...</div>
+<div class="block">You're at the end!</div>
+
+<script>
+    window.addEventListener('scroll', function() {
+        const scrollPosition = window.scrollY;
+        const totalHeight = document.body.scrollHeight - window.innerHeight;
+        const scrollPercentage = scrollPosition / totalHeight;
+
+        // Define color ranges
+        const darkBackground = { r: 0, g: 0, b: 0 };
+        const lightBackground = { r: 255, g: 255, b: 255 };
+        const darkText = { r: 255, g: 255, b: 255 };
+        const lightText = { r: 0, g: 0, b: 0 };
+
+        // Interpolate between two colors based on the scroll percentage
+        const interpolateColor = (color1, color2, factor) => {
+            const result = {
+                r: Math.round(color1.r + (color2.r - color1.r) * factor),
+                g: Math.round(color1.g + (color2.g - color1.g) * factor),
+                b: Math.round(color1.b + (color2.b - color1.b) * factor)
+            };
+            return `rgb(${result.r}, ${result.g}, ${result.b})`;
+        };
+
+        // Calculate and set the new background and text colors
+        const newBackgroundColor = interpolateColor(darkBackground, lightBackground, scrollPercentage);
+        const newTextColor = interpolateColor(darkText, lightText, scrollPercentage);
+
+        document.documentElement.style.setProperty('--background-color', newBackgroundColor);
+        document.documentElement.style.setProperty('--text-color', newTextColor);
+    });
+</script>
 <body class="dark-theme">
     <!-- Hero Section -->
     <section class="hero">
@@ -107,3 +115,4 @@
     </footer>
 </body>
 </html>
+
